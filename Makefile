@@ -6,4 +6,4 @@ run:
 	go run cmd/svc-auth/main.go
 
 gen:
-	protoc --proto_path=greet/greetpb/ --go_out=greet/greetpb/ --go_opt=paths=source_relative greet.proto
+	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative greet/greetpb/greet.proto
